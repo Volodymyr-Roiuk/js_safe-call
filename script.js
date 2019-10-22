@@ -1,6 +1,6 @@
 Function.prototype.safeCall = function(...params) {
   try {
-    return this.call(this, ...params);
+    return this(...params);
   } catch(error) {
     return null;
   }
@@ -14,3 +14,6 @@ function safeCall(func) {
     return false;
   }
 }
+
+
+
